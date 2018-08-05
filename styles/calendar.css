@@ -1,0 +1,30 @@
+.controls {
+  border: 1px solid #ddd;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+}
+
+.controls__input-group {
+  display: table-row;
+  vertical-align: middle;
+}
+
+.controls__label {
+  width: 7rem;
+  display: table-cell;
+}
+
+.controls__input {
+  margin: 0.5rem;
+}
+
+.controls__generate-calendar {
+  width: 18.5rem;
+}
+
+.calendar-canvas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
