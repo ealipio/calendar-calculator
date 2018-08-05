@@ -6,11 +6,15 @@ import {
   buildStartDate
 } from './date-utility'
 
+import {
+  buildCalendar
+} from './calendar-utility'
+
 const generateCalendar = () => {
   const startDateValue = getValue('#start-date')
   const daysAmount = getValue('#days-amount')
   const startDate = buildStartDate(startDateValue)
-  console.log({startDate, daysAmount})
+  buildCalendar({startDate, daysAmount})
 }
 
 const startUp = () => {

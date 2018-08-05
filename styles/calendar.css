@@ -28,3 +28,32 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.calendar-canvas table {
+  height: 260px;
+}
+
+td {
+  text-align: center;
+  line-height: 1.75rem;
+  width: 1.75rem;
+}
+
+thead td {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+tbody td {
+  font-size: .875rem;
+}
+
+td.before,
+td.after {
+  color: gray;
+  background: gray
+}
+.weekend{
+  background: #ff0;
+  color: #333;
+}
