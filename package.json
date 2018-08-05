@@ -19,11 +19,17 @@
   },
   "homepage": "https://github.com/ealipio/calendar-calculator#readme",
   "devDependencies": {
+    "cssnano": "^4.0.5",
     "eslint": "^5.3.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-node": "^7.0.1",
     "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0"
+    "eslint-plugin-standard": "^3.1.0",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "cors": "*",
+    "path": "^0.12.7"
   }
 }
