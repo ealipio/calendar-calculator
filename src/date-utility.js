@@ -88,7 +88,6 @@ export const getWeekInMonth = (year, month, myDate, nextDate) => {
       week = []
       results.push(week)
     }
-
     // push day to week
     week.push({
       date: new Date(iterator),
@@ -96,10 +95,28 @@ export const getWeekInMonth = (year, month, myDate, nextDate) => {
       after: iterator > nextDate,
       weekend: (iterator.getDay() === 0 || iterator.getDay() === 6) && ((iterator < firstDate) || (iterator < lastDate))
     })
-    // before: iterator < firstDate, // add indicator if before current month
-    // after: iterator > lastDate // add indicator if after current month
     iterator.setDate(iterator.getDate() + 1)
   }
 
   return results
+}
+
+export const daysInYear = (year) => {
+  const leap = !(year % 4) || (!(year % 100) && !(year % 400))
+  return leap ? 366 : 365
+}
+
+export const dayOfYear = (userDate) => {
+  const date = new Date(userDate.year, userDate.month, userDate.day)
+  var start = new Date(date.getFullYear(), 0, 0)
+  var diff = (date - start) + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000)
+  var oneDay = 1000 * 60 * 60 * 24
+  return Math.floor(diff / oneDay)
+}
+
+export const isValid = (settings) => {
+  const doy = dayOfYear(settings.startDate)
+  const diy = daysInYear(settings.startDate.year)
+  const remainingDays = diy - doy
+  return ((remainingDays - settings.daysAmount) >= -1)
 }

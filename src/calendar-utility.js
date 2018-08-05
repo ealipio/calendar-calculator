@@ -4,14 +4,18 @@ import {
   getWeekInMonth,
   calculateMonthRange,
   buildHead,
-  buildWeeks} from './date-utility'
+  buildWeeks,
+  isValid} from './date-utility'
 
 export const buildCalendar = (settings) => {
   const canvas = document.querySelector('#calendar-canvas')
-
-  const months = buildMonths(settings)
-  resetElement(canvas)
-  mountInDOM(months, canvas)
+  if (isValid(settings)) {
+    resetElement(canvas)
+    const months = buildMonths(settings)
+    mountInDOM(months, canvas)
+  } else {
+    alert('Multi Year is not implemented yet')
+  }
 }
 
 const buildMonths = ({startDate, daysAmount}) => {

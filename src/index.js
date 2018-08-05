@@ -12,7 +12,7 @@ import {
 
 const generateCalendar = () => {
   const startDateValue = getValue('#start-date')
-  const daysAmount = getValue('#days-amount')
+  const daysAmount = parseInt(getValue('#days-amount'))
   const startDate = buildStartDate(startDateValue)
   buildCalendar({startDate, daysAmount})
 }
