@@ -9,3 +9,6 @@ Then to start the application in dev mode:
 
 Build to production mode:
 `npm run build`
+
+online version: 
+https://gentle-dusk-78703.herokuapp.com/
